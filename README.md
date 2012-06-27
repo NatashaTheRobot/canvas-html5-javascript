@@ -1,0 +1,1 @@
+This is an experimental drawing app using HTML5, JavaScript, and JQuery
