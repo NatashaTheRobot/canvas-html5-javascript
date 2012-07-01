@@ -1,46 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang='en'>
 	<head>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-		<style>
-			.drawing-area {
-				border: 1px solid black;
-			}
-
-		</style>
+		<script type=text/javascript src="../assets/javascript/drawdot.js"></script>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../assets/stylesheets/drawing.css">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 	</head>
 	<body>
-		<!-- <h1>Draw Something Awesome</h1> -->
 		<canvas class="drawing-area" width="500" height="500"></canvas>
-		<script>
-			
-			$(function() {
-				var drawDot = function(context, color, x, y) {
-					context.fillStyle = color;
-					context.fillRect (x, y, 5, 5);
-				}
-				
-				var canvas = $(".drawing-area")[0];
-				var context = canvas.getContext("2d");
-				
-				var mouseclicked = false
-				
-				$(".drawing-area").mousedown (function(e) {
-					mouseclicked = true;
-				});
-				
-				$(".drawing-area").mouseup (function(e) {
-					mouseclicked = false;
-				});
-				
-				$(".drawing-area").mousemove (function(e) {
-					if(mouseclicked === true) {
-						var x = e.pageX;
-						var y = e.pageY;
-						drawDot(context, '#BADA55', x, y);
-					};
-				});
-				
-			});
-		</script>
 	</body>
 </html>
